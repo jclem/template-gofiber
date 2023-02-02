@@ -5,7 +5,6 @@ This is a template for applications using the [Fiber](https://gofiber.io/) frame
 ## Prerequisites
 
 - [Go](https://golang.org/)
-- [Air](https://github.com/cosmtrek/air)
 
 ## Usage
 
@@ -13,7 +12,7 @@ This is a template for applications using the [Fiber](https://gofiber.io/) frame
 > git clone https://github.com/jclem/template-gofiber.git
 > cd template-gofiber
 > script/rename user\\/mymodule
-> air
+> go run main.go
 ```
 
 ## Features
