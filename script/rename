@@ -3,10 +3,11 @@
 set -e
 
 modname=$1
-currname="jclem/template-gofiber"
+currname="jclem\\/template-gofiber"
 
 if [ -z "$modname" ]; then
     echo "Usage: $0 <modulename>"
+    echo "  Slashes in modulename must be escaped."
     exit 1
 fi
 
@@ -14,4 +15,5 @@ fi
 find . -type f \
     -not -path "./.git/*" \
     -not -path "./tmp/*" \
+    -not -path "./script/*" \
     -exec sed -i '' -e "s/$currname/$modname/g" {} \;
