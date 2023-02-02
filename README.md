@@ -1,6 +1,6 @@
 # jclem/template-gofiber
 
-This is a template for a [GoFiber](https://gofiber.io/) application.
+This is a template for applications using the [Fiber](https://gofiber.io/) framework for Go.
 
 ## Prerequisites
 
