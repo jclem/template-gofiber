@@ -1,0 +1,17 @@
+#!/bin/bash
+
+set -e
+
+modname=$1
+currname="jclem/template-gofiber"
+
+if [ -z "$modname" ]; then
+    echo "Usage: $0 <modulename>"
+    exit 1
+fi
+
+# Replace all instances of $currname with $modname in all contents.
+find . -type f \
+    -not -path "./.git/*" \
+    -not -path "./tmp/*" \
+    -exec sed -i '' -e "s/$currname/$modname/g" {} \;
