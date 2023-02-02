@@ -38,6 +38,9 @@ func (c *Config) IsProd() bool {
 	return c.AppEnv == production
 }
 
+// New returns a new Config.
+// NOTE: A default must be set for each field (even if just `nil`), or else it
+// won't be populated from environment variables.
 func New() (*Config, error) {
 	v := viper.New()
 	v.AutomaticEnv()
